@@ -8,6 +8,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -57,12 +58,15 @@ public class FreeTestCon {
 				"https://drive.google.com/file/d/196Kocyb0XA2SfSGtVFqMy7gsqFSgEANB/view?usp=drive_link",
 				"https://drive.google.com/file/d/1LARv1KodhjLFhWUDmAacOL5h_yHSrUhC/view?usp=sharing",
 				"https://drive.google.com/file/d/1eApwjWywyaT57duvn9wEPkrMmoqUPeW8/view?usp=drive_link",
-				"https://drive.google.com/uc?export=view&id=1y6UxV-quYC_gIpqjPwGvKR5gShcT1ZbK",
-				"https://drive.google.com/uc?export=view&id=1f1sHjZMdrBlAXR3XDAoEStJ-qNRj25sM",
-				"https://drive.google.com/uc?export=view&id=14GGY17j6Q2_NOo8zIqO0FdloIER3ULir",
 				"https://drive.google.com/file/d/1oUahlT4hpyy4ekhVVMSax-ugtkDEcodI/view?usp=drive_link"
 				);
 		
+		
+				/*
+				 * "https://drive.google.com/uc?export=view&id=1y6UxV-quYC_gIpqjPwGvKR5gShcT1ZbK",
+				 * "https://drive.google.com/uc?export=view&id=1f1sHjZMdrBlAXR3XDAoEStJ-qNRj25sM",
+				 * "https://drive.google.com/uc?export=view&id=14GGY17j6Q2_NOo8zIqO0FdloIER3ULir",
+				 */
 		
 	
 		
@@ -97,6 +101,21 @@ public class FreeTestCon {
 		return pList.subList(start, end);
 	
 	}
+	
+	
+	
+	
+	@GetMapping("delete/{emailid}")
+	public boolean delete(@PathVariable("emailid") int emailId) {
+		
+		System.out.println("Request received for delete " + emailId);
+		return true; 
+	}
+
+	
+	
+	
+	
 
 	@GetMapping("listImg")
 	public List<Photo> listImg() {
@@ -135,5 +154,9 @@ public class FreeTestCon {
 	public List<Root> imagesGdrive1() {
 		return serv.getProducts();
 	}
+	
+	
+	
+	
 
 }
