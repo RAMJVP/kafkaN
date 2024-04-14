@@ -22,14 +22,7 @@ class DevbitJsonApplicationTests {
 	
 	@Test
 	public void testList() {
-		List<String> urls= Arrays.asList("https://drive.google.com/file/d/196Kocyb0XA2SfSGtVFqMy7gsqFSgEANB/view?usp=drive_link",
-				"https://drive.google.com/file/d/1LARv1KodhjLFhWUDmAacOL5h_yHSrUhC/view?usp=sharing",
-				"https://drive.google.com/file/d/1eApwjWywyaT57duvn9wEPkrMmoqUPeW8/view?usp=drive_link",
-				"https://drive.google.com/uc?export=view&id=1y6UxV-quYC_gIpqjPwGvKR5gShcT1ZbK",
-				"https://drive.google.com/uc?export=view&id=1f1sHjZMdrBlAXR3XDAoEStJ-qNRj25sM",
-				"https://drive.google.com/uc?export=view&id=14GGY17j6Q2_NOo8zIqO0FdloIER3ULir",
-				"https://drive.google.com/file/d/1oUahlT4hpyy4ekhVVMSax-ugtkDEcodI/view?usp=drive_link",
-				"https://drive.google.com/file/d/164WvK3bch87Ww8iorDQgfya_8Lp4iUU5/view?usp=drive_link",
+		List<String> urls= Arrays.asList("https://drive.google.com/file/d/164WvK3bch87Ww8iorDQgfya_8Lp4iUU5/view?usp=drive_link",
 				"https://drive.google.com/file/d/12ZQLQ0awvomB3pQZH8A-KgmEWiqOFK2q/view?usp=drivesdk",
 				"https://drive.google.com/file/d/1hIoC29ZUd80XVDBJWMG5G4gBNlxJAA_p/view?usp=drivesdk",
 				"https://drive.google.com/file/d/1LvkKThPEUhL-TXeSvygNNF0m7KzBfxTA/view?usp=drivesdk",
@@ -55,7 +48,11 @@ class DevbitJsonApplicationTests {
 				"https://drive.google.com/file/d/1M3HFcoDFMG8UP_RGxCDcCfTqMF9oZ8aA/view?usp=drivesdk",
 				"https://drive.google.com/file/d/1Al8N1zXa55Sf5BU1muzfa7HYTL6iqHLC/view?usp=drivesdk",
 				"https://drive.google.com/file/d/164WvK3bch87Ww8iorDQgfya_8Lp4iUU5/view?usp=drivesdk",
-				"https://drive.google.com/file/d/1oUahlT4hpyy4ekhVVMSax-ugtkDEcodI/view?usp=drivesdk"
+				"https://drive.google.com/file/d/1oUahlT4hpyy4ekhVVMSax-ugtkDEcodI/view?usp=drivesdk",
+				"https://drive.google.com/file/d/196Kocyb0XA2SfSGtVFqMy7gsqFSgEANB/view?usp=drive_link",
+				"https://drive.google.com/file/d/1LARv1KodhjLFhWUDmAacOL5h_yHSrUhC/view?usp=sharing",
+				"https://drive.google.com/file/d/1eApwjWywyaT57duvn9wEPkrMmoqUPeW8/view?usp=drive_link",
+				"https://drive.google.com/file/d/1oUahlT4hpyy4ekhVVMSax-ugtkDEcodI/view?usp=drive_link"
 				);
 		
 		
@@ -88,13 +85,149 @@ class DevbitJsonApplicationTests {
 			end=pList.size();
 		}
 		
-		System.out.println("pn"+pn +":::"+pList.subList(start, end));
+		System.out.println("pn"+pn +":::"+pList.subList(start, end)+":::size:"+":::"+pList.subList(start, end).size());
 		
 		
 		
-		System.out.println("pList"+pList);
+		System.out.println("pList"+pList.size());
 		
 	}
+	
+	
+	
+	
+	
+	
+	
+	@Test
+	public void swipe() {
+
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	 volatile boolean stop=false;
+	
+	@Test
+	public void flip() {
+	
+	Thread bkT=new Thread(()->{
+		while (!stop()) {
+		System.out.println("runing...");}
+		
+	});
+	
+	bkT.start();
+	
+	stop=true;
+	System.out.println("@@@");
+	}
+
+
+
+
+
+	private boolean stop() {
+		// TODO Auto-generated method stub
+		return stop;
+	}
+	
+	
+	
+	@Test
+	public void testRecord(){
+		
+		
+		Person person = new Person("John Doe", 30);
+        
+        // Accessing the properties of the record
+        System.out.println("Name: " + person.name());
+        System.out.println("Age: " + person.age());
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*
+	 * Declare List<String>, assign 10 random numeric string of 2 digit, like
+	 * "12","21","32", "44" ... Using Streams(java 8), group the elements which are
+	 * having same sum of digits.
+	 * 
+	 * Example : "12", "21", "32", "44", "55", "23","66","19","98","85"
+	 * 
+	 * Output:
+	 * 
+	 * "12", "21" - sum of digit is 3 "32", "23" - sum of digit is 5 "55","19" - sum
+	 * of digit is 10
+	 */
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 
